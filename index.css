@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "EB Garamond", Georgia, serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8fafc] text-slate-800 antialiased;
+  }
+  
+  h2 {
+    @apply text-[1.25rem] font-bold text-slate-700 lowercase mb-2;
+  }
+
+  h2::first-letter {
+    @apply uppercase;
+  }
+}
+
+@layer components {
+  .title-huge {
+    @apply text-[3.5rem] leading-[0.9] -tracking-[0.02em] font-[800];
+  }
+
+  .card-base {
+    @apply bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden;
+  }
+
+  .accent-line-blue {
+    @apply border-l-4 border-l-blue-500;
+  }
+
+  .accent-line-emerald {
+    @apply border-t-4 border-t-emerald-500;
+  }
+
+  .math-font {
+    @apply font-serif italic text-[22.5px];
+  }
+}
+
+.katex { font-size: 1.1em !important; }
